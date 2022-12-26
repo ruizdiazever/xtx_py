@@ -69,7 +69,6 @@ while True:
                 print(result["colored"])
                 logging.info(result["plain"])
     delay = RANDOM_DELAY * 60
-    delay = 3
     next_check = (now + timedelta(seconds=delay)).strftime('%d/%m/%Y %H:%M')
     msg_check = f"Next check at {next_check}"
     print(f"{msg_check:^80}")
