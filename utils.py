@@ -7,13 +7,13 @@ def set_output(title: str, body: str, extradata: str):
     }
 
 
-def api_telegram(token=str, chat_id=str, message=str) -> str:
+def api_telegram(token: str, chat_id: str, message: str) -> str:
     """ Return url to request with API Telegram """
     url = f"https://api.telegram.org/bot{token}/sendMessage?chat_id={chat_id}&text={message}"
     return url
 
 
-def colored(text, color):
+def colored(text: str, color: str):
     """ Return string in color with ANSI codes """
 
     if color == "red":
