@@ -16,7 +16,7 @@ I create this bot to get a GPU xD, work searching stock in differents sites (scr
     TELEGRAM_CHAT_ID=''
     ```
 
-2. Set your links and settings in `links.py`, example:
+2. Set your links and user agents in `settings.py`, example:
 
     * **name:** name to identifier the site shop.
     * **url:** url of product in site shop.
@@ -35,6 +35,10 @@ I create this bot to get a GPU xD, work searching stock in differents sites (scr
             "noStockString": "Non disponibile.",
             "active": True
         }
+    ]
+    USER_AGENTS = [
+        "Mozilla/5.0 (Windows NT 10.0; rv:78.0) Gecko/20100101 Firefox/78.0",
+        "Mozilla/5.0 (X11; Linux x86_64; rv:95.0) Gecko/20100101 Firefox/95.0"
     ]
     ```
 

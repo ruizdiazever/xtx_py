@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 from bs4 import BeautifulSoup
 import pytz
 from dotenv import load_dotenv
-from links import LINKS
+from settings import LINKS, USER_AGENTS
 from utils import set_output, api_telegram
 
 
@@ -34,9 +34,11 @@ while True:
     logging.info(now_formatted)
     logging.info(SEPARATOR)
     for link in LINKS:
+        random_user_agent = random.choice(USER_AGENTS)
+        headers = {'User-Agent': random_user_agent}
         if link["active"]:
             try:
-                response = requests.get(link["url"], timeout=5)
+                response = requests.get(link["url"], timeout=5, headers=headers)
                 soup = BeautifulSoup(response.text, "html.parser")
 
                 if link["type"] == "id":

@@ -131,4 +131,4 @@ dmypy.json
 
 # Personal
 .env
-links.py
+settings.py
