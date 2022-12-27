@@ -60,7 +60,7 @@ while True:
                         body = "RX 7900 XTX is in stock"
                         extradata = list_result
                         result = set_output(title, body, extradata)
-                        url = api_telegram(TELEGRAM_TOKEN, TELEGRAM_CHAT_ID, result)
+                        url = api_telegram(TELEGRAM_TOKEN, TELEGRAM_CHAT_ID, result["plain"])
                         requests.get(url, timeout=10)
                 else:
                     result = set_output(link["name"], "Request failed", "None")
