@@ -1,6 +1,6 @@
 # Scapring Bot 🤖
 
-This bot is to get a GPU xD
+I create this bot to get a GPU xD, work searching stock in differents sites (scraping the site) and send me a message in Telegram when the stock is available.
 
 ## Requirements 📝
 
@@ -9,7 +9,7 @@ This bot is to get a GPU xD
 
 ## Want to try it? 😁
 
-1. Create a `.env` file with your phone number and your Coinbase and Telegram credentials.
+1. Create a `.env` file with your Telegram credentials.
 
     ```bash
     TELEGRAM_TOKEN=''
@@ -17,6 +17,13 @@ This bot is to get a GPU xD
     ```
 
 2. Set your links and settings in `links.py`, example:
+
+    * **name:** name to identifier the site shop.
+    * **url:** url of product in site shop.
+    * **type:** class or id (HTML element) containing the availability message.
+    * **typeKey:** key of id or class
+    * **noStockString:** no available message in product shop site (the bot send you a message if this string dont exist)
+    * **active:** you can add many links and deactivate some if you want.
 
     ```python
     LINKS = [
